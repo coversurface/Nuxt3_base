@@ -1,10 +1,3 @@
-<script setup>
-const route = useRoute();
-const { data: navigation } = await useAsyncData("navigation", () => {
-  return fetchContentNavigation();
-});
-</script>
-
 <template>
   <div class="base-container">
     <header class="">
@@ -20,6 +13,13 @@ const { data: navigation } = await useAsyncData("navigation", () => {
     </footer>
   </div>
 </template>
+
+<script setup>
+// const route = useRoute();
+const { data: navigation } = await useAsyncData("navigation", () => {
+  return fetchContentNavigation();
+});
+</script>
 
 <style lang="scss" scoped>
 div {
